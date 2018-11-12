@@ -8,7 +8,7 @@ public class SpellCheck {
 	private HashSet<String> dictionary = new HashSet<String>();
 	private TreeSet<String> miss_spelled_words = new TreeSet<String>();
 	private HashSet<String> wordBank = new HashSet<String>();
-	int lineNum = 0;
+	
 
 	public SpellCheck() throws FileNotFoundException {
 		Scanner words = null;
@@ -22,6 +22,7 @@ public class SpellCheck {
 	}
 
 	public void checkSpelling(String fileName) throws FileNotFoundException {
+		int lineNum = 0;
 		System.out.println("************* Spell Checking " + fileName + "*************");
 
 		miss_spelled_words.clear();
